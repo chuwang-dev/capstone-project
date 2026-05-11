@@ -174,7 +174,7 @@ bash scripts/rollback.sh --auto
 - Verify port 3000 is accessible: `curl http://localhost:3000/api/health`
 
 ### Out of storage
-```bash
+```bashssh -i ~/.ssh/id_ed25519 ubuntu@54.208.89.58
 # On the instance
 docker system prune -a --volumes
 ```
