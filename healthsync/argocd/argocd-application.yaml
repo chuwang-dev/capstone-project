@@ -1,0 +1,38 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: healthsync
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/chuwang-dev/simple-cicd-app.git
+    targetRevision: main
+    path: healthsync/kubernetes
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: healthsync
+  
+  # Auto-sync policy
+  syncPolicy:
+    automated:
+      # Automatically prune resources that are no longer defined in Git
+      prune: true
+      # Automatically sync when Git repo changes
+      selfHeal: true
+    # Sync options
+    syncOptions:
+    - CreateNamespace=true
+    
+    # Retry policy for failed syncs
+    retry:
+      limit: 5
+      backoff:
+        duration: 5s
+        factor: 2
+        maxDuration: 3m
+  
+  # Notification channels
+  # info:
+  #   - name: notification.argoproj.io/slack
+  #     value: '#deployments'

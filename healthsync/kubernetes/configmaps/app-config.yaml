@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config
+  namespace: healthsync
+data:
+  POSTGRES_HOST: "postgres.healthsync.svc.cluster.local"
+  POSTGRES_PORT: "5432"
+  POSTGRES_DB: "healthsync"
+  POSTGRES_USER: "postgres"
+  REDIS_HOST: "redis.healthsync.svc.cluster.local"
+  REDIS_PORT: "6379"
+  NODE_ENV: "production"
+  PORT: "3001"
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: auth-config
+  namespace: healthsync
+data:
+  PORT: "3002"
+  NODE_ENV: "production"
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: frontend-config
+  namespace: healthsync
+data:
+  REACT_APP_API_BASE: "http://backend:3001"
+  REACT_APP_AUTH_BASE: "http://auth-service:3002"

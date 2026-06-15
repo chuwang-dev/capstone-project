@@ -1,6 +1,6 @@
-# AWS EC2 Deployment Guide
+# Automated Deployment of a Containerized Web Application to an EC2 Instance Using a CI/CD Pipeline
 
-This guide provides step-by-step instructions for deploying the Simple CI/CD App to Amazon EC2.
+This guide provides step-by-step instructions for deploying the Simple CI/CD App to Amazon EC2 using GitHub Actions, Docker, and Docker Compose.
 
 ## Prerequisites
 

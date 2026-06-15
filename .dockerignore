@@ -1,7 +1,12 @@
+# Dependency directories
 node_modules
 npm-debug.log
+
+# Build artifacts
 build
 dist
+
+# Version control and editor files
 .git
 .gitignore
 README.md
@@ -9,6 +14,8 @@ README.md
 .vscode
 .idea
 coverage
+
+# Secrets and environment files
 *.pem
 *.key
 .env

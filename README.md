@@ -1,8 +1,16 @@
-# Simple CI/CD App 🚀
+cat ~/.ssh/id_ed25519.pubssh -T git@github.com# Automated Deployment of a Containerized Web Application to an EC2 Instance Using a CI/CD Pipeline
 
-A comprehensive example of a modern CI/CD pipeline that demonstrates automated testing, building, containerization, and deployment of a web application to cloud VMs.
+### Cloud & DevOps Stack
+
+- Amazon Web Services (AWS)
+- AWS EC2
+- Docker Compose
+- Docker
+- GitHub Actions
 
 ## Overview
+
+This project implements a fully automated CI/CD pipeline for deploying a containerized web application to an AWS EC2 instance. The workflow automates code integration, testing, image building, and deployment while ensuring reliable container orchestration and cloud deployment management.
 
 This project showcases production-ready deployment practices using:
 
