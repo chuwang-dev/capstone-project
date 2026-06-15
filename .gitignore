@@ -26,6 +26,8 @@ dist/
 # SSH keys (keep production keys secure)
 *.pem
 *.key
+mykeypair
+mykeypair.pub
 
 # coverage
 coverage/
